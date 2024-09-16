@@ -1,23 +1,24 @@
 ! page8 1-1
-!
-! The latest version (2024/9/10)
+! 1text1.f90
+! The latest version (2024/9/16)
 
 program practice
 implicit none
 
- real::x           ! Specify variables which you'll use.
- integer::n
+	! Specify variables which you'll use.
+	real::x 
+	integer::n
  
- ! Use ' ' or " " when you write a sentence or some words
- write(*,*)'Input positive real number x.'   
- ! Don't use ' ' nor " " when you read or write variables.
- read(*,*)x
+	! Use ' ' or " " when you write a sentence or some words
+	write(*,*)'Input positive real number x.'   
+	! Don't use ' ' nor " " when you read or write variables.
+	read(*,*)x
 
- write(*,*)"Input positive integer n." 
- read(*,*)n
+	write(*,*)"Input positive integer n." 
+	read(*,*)n
 
- ! ** means raising a number to a power.
- ! The answer will be written on the display.
- write(*,*)x**(1.0/n)   
+	! ** means raising a number to a power.
+	! The answer will be written on the display.
+	write(*,*)x ** (1.0 / n)   
 
 end program practice
