@@ -10,10 +10,9 @@ implicit none
 	write(*,*)'Input real number x'
  	read(*,*)x
 
-	if (x >= 0) then
-		decimal_part = x - aint(x)
-	else
-		decimal_part = 1.0 - (abs(x) - aint(abs(x)))
+	decimal_part = abs(x) - aint(abs(x))
+	if ((x < 0e0).and.(decimal_part /= 0e0)) then
+		decimal_part = 1e0 - decimal_part
 	end if
 
 	write(*,*)decimal_part
