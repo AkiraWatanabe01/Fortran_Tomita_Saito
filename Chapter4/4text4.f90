@@ -14,10 +14,14 @@ implicit none
 	z = int(x)
 	y = x - z
 
-	if (y==0.0e0) then
+	if (y == 0e0) then
 		write(*,*)'f = c =', z
 	else
-		write(*,*)'f =', z,'  c =', z + 1
+		if (x >= 0e0) then
+			write(*,*)'f =', z, ', c =', z + 1
+		else
+			write(*,*)'f =', z - 1, ', c =', z
+		end if
 	end if
 
 end program practice
