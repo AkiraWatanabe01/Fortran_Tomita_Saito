@@ -11,6 +11,6 @@ implicit none
  
 	double_sng = sng                          ! Change single into double
 	write(*,*)"[from single to double] 0.1e0 = ", double_sng
-	write(*,*)"[double] 0.1d0 = ", dbl
+	write(*,*)"[double               ] 0.1d0 = ", dbl
 
 end program practice
