@@ -25,7 +25,7 @@ implicit none
 	z2 = cmplx(x2, y2)
 	h = (abs(z1 + z2) <= (abs(z1) + abs(z2)))
 
-	write(*,*)'|z1 + z2| <= |z1| + |z2|?'
+	write(*,*)'|z1 + z2| <= |z1| + |z2|? (T:True, F:False)'
 	write(*,*)h
  	write(*,*)'|z1 + z2| = ', abs(z1 + z2), '|z1| + |z2| = ', (abs(z1) + abs(z2))
 
