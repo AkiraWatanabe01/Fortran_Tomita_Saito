@@ -33,7 +33,7 @@ implicit none
 	! The result
  	if (num == 0) stop "No students!"
 	write(*,*)"The number of students : ", num              
-	write(*,*)"The maximum score : ", max
-	write(*,*)"The minimum score : ", min
+	write(*,*)"The maximum score      : ", max
+	write(*,*)"The minimum score      : ", min
 
 end program practice
