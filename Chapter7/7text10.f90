@@ -61,11 +61,9 @@ implicit none
 	write(*,*)""
 
 	! Display factorss 
-	write(*, '(1X, I10, A1)', advance='no')num, "="
+	write(*, '(1X, I10, A2)', advance='no')num, "= "
 	do j = 1, index
-		if (j == 1) then
-			write(*, '(A1)', advance='no')" "
-		else
+		if (j > 1) then
 			write(*, '(3X, A1)', advance='no')"*"
 		end if
 		form = "( 1X, I" // char_num(digit_factor(j)) // ")"
