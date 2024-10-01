@@ -17,14 +17,7 @@ implicit none
 	! Input an integer
 	write(*,'(A)',advance='no')'Input an integer (2 - 2147483647):'
 	read(*,*)num
-
-	select case (num)
-	case (:-1)
-		stop "Input a positive integer."
-	case (2:2147483647)
-	case default
-		stop "The integer should be from 2 to 2147483647"
-	end select
+	if ((num < 2).or.(2147483647 < num)) stop "The integer should be from 2 to 2147483647"
 
 	! Factorization
 	composite = num
@@ -60,7 +53,7 @@ implicit none
 	end do
 	write(*,*)""
 
-	! Display factorss 
+	! Display factors 
 	write(*, '(1X, I10, A2)', advance='no')num, "= "
 	do j = 1, index
 		if (j > 1) then
