@@ -8,7 +8,7 @@ implicit none
  
 	integer::i, j, h
 	real::x, f
- 	real::x_init
+ 	real::x_init, x_left, x_right
 	real,parameter::dx = 0.1e0
 
 	! Drawing a graph
