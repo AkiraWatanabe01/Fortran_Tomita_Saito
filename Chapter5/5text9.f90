@@ -54,16 +54,16 @@ implicit none
       		end do
 	end if
 
-	if ((f < 0).and.(x_init < 2.0e0)) then
- 		x_left = x_init
-   		x_right = 2.0e0
+	if ((f < 0).and.(-1.0e0 < x_init)) then
+ 		x_left = -1.0e0
+   		x_right = x_init
 		do while (abs(f) > 1.0e-4)
   			x = (x_left + x_right) * 0.5e0
      			f = x ** 3 + x ** 2 - 5.0e0 * x - 1.0e0
          		if (f < 0.0e0) then
-            			x_left = x
-         		else
             			x_right = x
+         		else
+            			x_left = x
          		end if
       		end do
 	end if
