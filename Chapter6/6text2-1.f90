@@ -30,16 +30,18 @@ implicit none
 		write(*,*)(original_matrix(p, q), q = 1, 9)
 	end do
 
-	i = 10
-	do while ((i < 1).or.(i > 9))
+	do
 		write(*,*)"Input i :"
 		read(*,*)i
+		if ((1 <= i).and.(i <= 9)) exit
+		write(*,*)"Input an integer (1 to 9)"
 	end do
 
- 	j = 10
-	do while ((j < 1).or.(j > 9))
+	do
 		write(*,*)"Input j :"
 		read(*,*)j
+		if ((1 <= j).and.(j <= 9)) exit
+		write(*,*)"Input an integer (1 to 9)"
 	end do
 
 	if ((i == 1).and.(j == 1)) then
@@ -59,7 +61,7 @@ implicit none
 	end if
 
 	! Display the result
-	write(*,*)'The result is'
+	write(*,*)"The result is"
 	do p = 1, 8
 		write(*,*)(final_matrix(p, q), q = 1, 8)
 	end do
