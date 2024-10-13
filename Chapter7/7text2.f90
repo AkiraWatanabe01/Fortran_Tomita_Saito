@@ -7,10 +7,9 @@ implicit none
 
 	character(len = 39)::axis_maximum, axis_minimum, axis_zero, axis, line
 	integer::i, j
-	integer::index 
-	real::radian                                                                   ! -1 <= value <= 1
+	integer::row_sine, row_cosine 
+	real::radian 
 	real::value_sine, value_cosine
-	real::y_value(-25:25)
 	real, parameter::degree_to_radian = 3.1415927e0 / 180e0
 
 	! axis
@@ -18,10 +17,6 @@ implicit none
 	axis_minimum = "-1-------------------------------------"
 	axis_zero    = " 0-------------------------------------"
 	axis         = " |                  |                  "
-
-	do i = 25, -25, -1
-		y_value(i) = i * 4e-2
-	end do 
 
 	do i = 25, -25, -1
 		! axis
@@ -44,27 +39,14 @@ implicit none
 			value_sine = sin(radian)
 			value_cosine = cos(radian)
 
-			value_sine = anint(value_sine * 1e5) * 1e-5
-			value_cosine = anint(value_cosine * 1e5) * 1e-5
-
-			if (i > -25) then
-				if ((y_value(i - 1) < value_sine).and.(value_sine <= y_value(i))) then
-					line(j:j) = 's'
-				end if
-
-				if ((y_value(i - 1) < value_cosine).and.(value_cosine <= y_value(i))) then
-					line(j:j) = 'c'
-				end if
+			row_sine = nint(value_sine * 25.0e0)
+			if (i == row_sine) then
+				line(j:j) = 's'
 			end if
 
-			if (i == -25) then
-				if (value_sine <= y_value(i)) then
-					line(j:j) = 's'
-				end if
-
-				if (value_cosine <= y_value(i)) then
-					line(j:j) = 'c'
-				end if
+			row_cosine = nint(value_cosine * 25.0e0)
+			if (i == row_cosine) then
+				line(j:j) = 'c'
 			end if
 		end do
 
