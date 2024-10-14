@@ -51,7 +51,6 @@ implicit none
 	case (ichar('e'))
 		if (char_last_but_one == ichar('f')) then
 			word_modified((length_word - 1):(length_word - 1)) = 'v'
-			word_modified((length_word + 1):(length_word + 1)) = 's'
 		end if
 	end select
 
