@@ -1,0 +1,19 @@
+What is the status of Fortran?
+
+Fortran is mature and under active development. The latest revision of the 
+language is Fortran 2023. There are over a dozen open source and proprietar-
+y Fortran compilers. Further, open source projects like the Standard Librar-
+y and the Fortran Package Manager are under active development.
+
+What is Fortran used for?
+
+Fortran is mostly used in domains that adopted computation early-science an-
+d engineering. These include numerical weather and ocean prediction, comput-
+ational fluid dynamics, applied math, statistics, and finance. Fortran is t-
+he dominant language of High Performance Computing and is used to benchmark
+ the fastest supercomputers in the world.
+
+Should I use Fortran for my new project?
+
+If you're writing a program or a library to perform fast arithmetic computa-
+tion over large numeric arrays, Fortran is the optimal tool for the job.
