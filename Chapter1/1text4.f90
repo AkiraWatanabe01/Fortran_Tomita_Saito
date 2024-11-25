@@ -5,7 +5,7 @@
 program practice
 
 	implicit none
-	real::r, a, n, s
+	real :: r, a, n, s
 
 	write(*,*)"Input the annual interest rate [%]."
 	read(*,*)r
