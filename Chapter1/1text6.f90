@@ -1,11 +1,11 @@
 ! page8 1-6
 ! 1text6.f90
-! The latest version (2024/9/16) 
+! The latest version (2024/11/25) 
 
 program practice
-implicit none
 
-	integer::p, q, r, s, n
+	implicit none
+	integer :: p, q, r, s, n
 
 	write(*,*)'Input the value of p (0 <= p < 16).'
 	read(*,*)p
