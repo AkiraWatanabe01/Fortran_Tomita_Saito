@@ -6,8 +6,8 @@ program practice
 
 	implicit none
 	! Specify variables which you'll use.
-	integer::n
-	real::x
+	integer :: n
+	real :: x
  
 	! Use ' ' or " " when you write a sentence or some words
 	write(*,*)"Input positive real number x."   
