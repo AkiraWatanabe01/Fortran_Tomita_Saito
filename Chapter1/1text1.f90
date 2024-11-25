@@ -1,16 +1,16 @@
 ! page8 1-1
 ! 1text1.f90
-! The latest version (2024/9/16)
+! The latest version (2024/11/25)
 
 program practice
-implicit none
 
+	implicit none
 	! Specify variables which you'll use.
-	real::x 
 	integer::n
+	real::x
  
 	! Use ' ' or " " when you write a sentence or some words
-	write(*,*)'Input positive real number x.'   
+	write(*,*)"Input positive real number x."   
 	! Don't use ' ' nor " " when you read or write variables.
 	read(*,*)x
 
