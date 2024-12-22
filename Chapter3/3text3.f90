@@ -1,19 +1,19 @@
 ! p28 3-3
 ! 3text3.f90
-! The latest version (2024/9/20)
+! The latest version (2024/12/22)
 
 program practice
-implicit none
 
-	real::a, b, c, x1, x2
- 	real::disciminant
+	implicit none
+	real :: a, b, c, x1, x2
+ 	real :: disciminant
 
-	write(*,*)'Input coefficients.'
-	write(*,*)'a = ?'
+	write(*,*)"Input coefficients."
+	write(*,*)"a = ?"
 	read(*,*)a
-	write(*,*)'b = ?'
+	write(*,*)"b = ?"
 	read(*,*)b
-	write(*,*)'c = ?'
+	write(*,*)"c = ?"
 	read(*,*)c
 
 	if (a == 0) then
@@ -22,23 +22,23 @@ implicit none
 			write(*,*)x1
 		else
 			if (c==0) then
-   				write(*,*)'Solution indetermine'
+   				write(*,*)"Solution indetermine"
 			else
-				write(*,*)'No solution'
+				write(*,*)"No solution"
     			end if 
 		end if
 	else
  		discriminant = b * b - 4e0 * a * c
 		if (discriminant > 0) then
-			x1=(-b + sqrt(discriminant)) / (2e0 * a)   
-			x2=(-b - sqrt(discriminant)) / (2e0 * a)   
+			x1 = (-b + sqrt(discriminant)) / (2e0 * a)   
+			x2 = (-b - sqrt(discriminant)) / (2e0 * a)   
 			write(*,*)x1
 			write(*,*)x2
 		else if (discriminant == 0) then
         		x1 = -b / (2e0 * a)
 			write(*,*)x1
    		else
-			write(*,*)'Complex roots'
+			write(*,*)"Complex roots"
 		end if
 	end if
 
