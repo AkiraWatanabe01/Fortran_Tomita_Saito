@@ -1,11 +1,11 @@
 ! Page28 3-7
 ! 3text7.f90 
-! The latest version (2024/9/17)
+! The latest version (2024/12/22)
 
 program practice
-implicit none
 
-	integer::i, n
+	implicit none
+	integer :: i, n
 
 	write(*,*)"Input an integer:"
 	read(*,*)i
