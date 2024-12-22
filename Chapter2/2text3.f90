@@ -1,11 +1,11 @@
 ! p16 2-3
 ! 2text3.f90
-! the latest version (2024/9/20)
+! the latest version (2024/12/22)
 
 program practice
-implicit none
 
-	real::A,V,n
+	implicit none
+	real :: A, V, n
 
 	A = 6.02e+23
 	V = 22.4e0
