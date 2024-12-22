@@ -1,13 +1,13 @@
 ! p28 3-4
 ! 3text4.f90
-! The latest version (2024/9/21)
+! The latest version (2024/12/22)
 
 program practice
-implicit none
 
-	integer::n, remainder
+	implicit none
+	integer :: n, remainder
 
-	write(*,*)'Input integer n: '
+	write(*,*)"Input integer n: "
 	read(*,*)n
  
 	remainder = mod(n, 7)
@@ -15,19 +15,19 @@ implicit none
 	! SELECT CASE statement
 	select case (remainder)
 	case (0)
-		write(*,*)'Sunday'
+		write(*,*)"Sunday"
 	case (1)
-		write(*,*)'Monday'
+		write(*,*)"Monday"
 	case (2)
-		write(*,*)'Tuesday'
+		write(*,*)"Tuesday"
 	case (3)
-		write(*,*)'Wednesday'
+		write(*,*)"Wednesday"
 	case (4)
-		write(*,*)'Thursday'
+		write(*,*)"Thursday"
 	case (5)
-		write(*,*)'Friday'
+		write(*,*)"Friday"
 	case (6)
-		write(*,*)'Saturday'
+		write(*,*)"Saturday"
 	end select
 
 end program practice
