@@ -1,11 +1,11 @@
 ! p42 4-7
 ! 4text7.f90
-! The latest version (2024/9/22)
+! The latest version (2024/12/31)
 
 program practice
-implicit none
 
-	logical, parameter::a = .TRUE., b = .TRUE.
+	implicit none
+	logical, parameter :: a = .TRUE., b = .TRUE.
 
 	write(*,*)"T:True, F:False"
 
