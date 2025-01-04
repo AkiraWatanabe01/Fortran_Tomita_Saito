@@ -1,11 +1,11 @@
 ! Page56 5-4 
 ! 5text4.f90
-! The latest version (2024/9/28)
+! The latest version (2025/1/4)
 
 program practice
-implicit none
 
-	integer::j, k, n, m
+	implicit none
+	integer :: j, k, n, m
 
  	! Upper part
 	! n=1        * 
