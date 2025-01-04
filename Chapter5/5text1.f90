@@ -1,12 +1,12 @@
 ! Page56 5-1
 ! 5text1.f90
-! The latest version (2024/9/24)
+! The latest version (2025/1/4)
 
 program practice
-implicit none
 
-	integer::budget, price      
-	integer::total_price = 0	! At first, set "total_price = 0" to use "do while" command.
+	implicit none
+	integer :: budget, price      
+	integer :: total_price = 0	! At first, set "total_price = 0" to use "do while" command.
 
 	! Set budget
 	write(*,*)"Input your budget."
