@@ -1,14 +1,14 @@
 ! Page57 5-7
 ! 5text7.f90
-! The latest version (2024/10/2)
+! The latest version (2025/1/4)
 
 program practice
-implicit none
 
-	integer::n, m
-	integer::num, remainder, counter
+	implicit none
+	integer :: n, m
+	integer :: num, remainder, counter
 
-	write(*,*)'Input a positive integer.'
+	write(*,*)"Input a positive integer."
 	read(*,*)num
 
 	if (num == 1) then
