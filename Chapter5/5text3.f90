@@ -1,19 +1,19 @@
 ! Page56 5-3
 ! 5text3.f90
-! The latest version (2024/9/28)
+! The latest version (2025/1/4)
 
 program practice
-implicit none
 
-	integer::score
- 	integer::max = -1, min = 10000000    ! initial maximum and minimum values
- 	integer::num = 0                     ! number of students
-	character(1)::answer
- 
+	implicit none
+ 	character(1) :: answer
+	integer :: score
+ 	integer :: max = -1, min = 10000000    ! initial maximum and minimum values
+ 	integer :: num = 0                     ! number of students
+
 	do   
 		write(*,*)"Continue?"
 		read(*,*)answer
-		if ((answer == 'N').or.(answer == 'n')) exit
+		if ((answer == 'N') .or. (answer == 'n')) exit
 
 		num = num + 1
 		write(*,*)"Input the score :"
