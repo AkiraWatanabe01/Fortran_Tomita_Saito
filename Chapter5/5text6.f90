@@ -1,12 +1,12 @@
 ! Page57 5-6
 ! 5text6.f90
-! The latest version (2024/9/30)
+! The latest version (2025/1/4)
 
 program practice
-implicit none
 
-	integer::x, y, z, k, m, n
-	real::z0, v
+	implicit none
+	integer :: x, y, z, k, m, n
+	real :: z0, v
 
 	! x should be smaller than 71 
 	do x = 1, 70
