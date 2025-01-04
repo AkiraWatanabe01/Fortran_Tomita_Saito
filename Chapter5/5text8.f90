@@ -1,12 +1,12 @@
 ! Page56 5-8
 ! 5text8.f90
-! The latest version (2024/10/2)
+! The latest version (2025/1/4)
 
 program practice
-implicit none
- 
-	integer::i
- 	integer::num, sum
+
+	implicit none
+	integer :: i
+ 	integer :: num, sum
 
 	do
 		write(*,*)"Input a positive integer or 0 to stop :"
@@ -21,7 +21,7 @@ implicit none
 			sum = sum + i
 		end do
 
-		write(*,*)'The sum of divisors of ', num, 'is ', sum
+		write(*,*)"The sum of divisors of ", num, "is ", sum
 	end do
 
 end program practice
