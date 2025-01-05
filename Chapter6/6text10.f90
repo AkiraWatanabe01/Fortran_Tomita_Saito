@@ -5,8 +5,9 @@
 program practice
 
 	implicit none
-	integer :: i, k, sum
-	integer :: n, sum_p, sum_q
+	integer :: i, k, n
+	integer :: sum
+	integer :: sum_p, sum_q
 	integer :: sigma(1:100)
 	integer :: p(0:50), q(0:50)
 
@@ -22,7 +23,7 @@ program practice
 	n = 0
 	p(0) = 1
 	q(0) = 1
-	write(*, '(1X, A3, I2, A5, I2, A6, I8, A1, I8, A1)')"(p(", n, "), q(", n, ")) = (", p(n), ",", q(n), ")"    
+	write(*, '(1X, "(p(", I2, "), q(", I2, ")) = (", I8, ",", I8, ")")')n, n, p(n), q(n)
 	do n = 1, 50
 		sum_p = 0
 		sum_q = 0
@@ -32,7 +33,7 @@ program practice
 		end do
 		p(n) = sum_p / n
 		q(n) = sum_q / n
-		write(*,'(1X, A3, I2, A5, I2, A6, I8, A1, I8, A1)')"(p(", n, "), q(", n, ")) = (", p(n), ",", q(n), ")"    
+		write(*, '(1X, "(p(", I2, "), q(", I2, ")) = (", I8, ",", I8, ")")')n, n, p(n), q(n)
 	end do
 
 end program practice
