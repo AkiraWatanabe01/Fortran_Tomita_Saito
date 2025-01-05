@@ -1,13 +1,13 @@
 ! Page 85 6-5
 ! 6text5.f90
-! The latest version (2024/10/8)
+! The latest version (2025/1/5)
 
 program practice
-implicit none
 
-	integer::i
-	integer, dimension(1:3)::array_1, array_2, array_3
-	integer, dimension(1:3)::array_max, array_min
+	implicit none
+	integer :: i
+	integer, dimension(1:3) :: array_1, array_2, array_3
+	integer, dimension(1:3) :: array_max, array_min
 
 	write(*,*)"Input the first array:"
 	read(*,*)(array_1(i), i = 1, 3)
