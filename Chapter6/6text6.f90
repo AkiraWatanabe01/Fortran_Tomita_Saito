@@ -1,20 +1,20 @@
-! Page 85  6-6
-! 
-! The latest version (2024/9/9)
+! Page 85 6-6
+! 6text6.f90 
+! The latest version (2025/1/5)
 
 program practice
-implicit none
 
-	integer::i, j, num
-	integer::interval(1:20)=(/ (0, i = 1, 20) /)
-	real(8)::x
-	real(8)::point(0:20)
+	implicit none
+	integer :: i, j
+ 	integer :: num
+	integer :: interval(1:20) = (/ (0, i = 1, 20) /)
+	real(8) :: x
+	real(8) :: point(0:20)
 
 	do i = 0, 20
 		point(i) = 1e0 / 20 * i
 	end do
 
-	
 	write(*,*)"Input an initial value (0 < x < 1):"
 	read(*,*)x
 
@@ -32,7 +32,7 @@ implicit none
 
 	do i = 1, 20
 		num = interval(i) / 10
-		write(*,'(1x,f4.2,1x,"|",50a1)')point(i), ('*', j = 1, num)
+		write(*, '(1X, F4.2, 1X, "|", 50A1)')point(i), ('*', j = 1, num)
 	end do
 
 end program practice
