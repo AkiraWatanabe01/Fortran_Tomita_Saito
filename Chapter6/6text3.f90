@@ -1,14 +1,14 @@
 ! Page 85 6-3
-! 6text3.f990
-! The latest version (2024/10/7)
+! 6text3.f90
+! The latest version (2025/1/5)
 
 program practice
-implicit none
 
-	integer::i, j
-	integer::position_row, position_col, max_component
-	integer::size_row, size_col
-	integer,allocatable::dst_matrix(:,:)
+	implicit none
+	integer :: i, j
+	integer :: position_row, position_col, max_component
+	integer :: size_row, size_col
+	integer, allocatable :: dst_matrix(:, :)
  
 	! Formation of the matrix
  	write(*,*)"What's the size of your matrix ?"
