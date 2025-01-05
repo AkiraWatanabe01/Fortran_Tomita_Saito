@@ -6,18 +6,18 @@
 ! ./6text7 < 6text7.dat
 
 program practice
-implicit none
 
-	integer::i, j
-	integer::n = 100
-	integer, allocatable::grade(:, :), square_grade(:, :), array_product(:)
-	integer, allocatable::student(:), student_total_square_grade(:), student_total_grade(:)
-	real::covariance
-	real::student_mean, student_variance, student_standard_deviation
-	real, dimension(1:5)::subject_mean, subject_variance, subject_standard_deviation
-	real, dimension(1:5, 1:5)::correlation
-	real, allocatable::student_hensachi(:)
-	character(len = 14)::subject_name(1:5) = (/"       English", "          Math", "      Japanese", "       Science", "Social-studies"/)
+	implicit none
+	integer :: i, j
+	integer :: n = 100
+	integer, allocatable :: grade(:, :), square_grade(:, :), array_product(:)
+	integer, allocatable :: student(:), student_total_square_grade(:), student_total_grade(:)
+	real :: covariance
+	real :: student_mean, student_variance, student_standard_deviation
+	real, dimension(1:5) :: subject_mean, subject_variance, subject_standard_deviation
+	real, dimension(1:5, 1:5) :: correlation
+	real, allocatable :: student_hensachi(:)
+	character(len = 14) :: subject_name(1:5) = (/"       English", "          Math", "      Japanese", "       Science", "Social-studies"/)
 
 	allocate(grade(1:n, 1:5), square_grade(1:n, 1:5), array_product(1:n))
 	allocate(student(1:n), student_total_grade(1:n), student_total_square_grade(1:n), student_hensachi(1:n))
@@ -72,7 +72,6 @@ implicit none
 	student_total_square_grade(1:n) = student_total_grade(1:n) ** 2
 	student_variance = real(sum(student_total_square_grade)) / size(student_total_square_grade)
 	student_standard_deviation = sqrt(student_variance)
-!	write(*,*)student_mean, student_variance, student_standard_deviation
 	student_hensachi(1:n) = 50e0 + 10e0 * (student_total_grade(1:n) - student_mean) / student_standard_deviation
 
 	write(*, '(A7, 7X, A11, 3X, A8)')"Student", "Total grade", "Hensachi"
