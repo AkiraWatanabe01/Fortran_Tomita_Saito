@@ -1,14 +1,14 @@
 ! Page 85 6-4
 ! 6text4.f90
-! The latest version (2024/10/8)
+! The latest version (2025/1/5)
 
 program practice
-implicit none
 
-	integer::i
-	integer::money
-	integer, dimension(1:10)::paper = 0
-	integer, dimension(1:10)::currency = (/ 10000, 5000, 2000, 1000, 500, 100, 50, 10, 5, 1/)
+	implicit none
+	integer :: i
+	integer :: money
+	integer, dimension(1:10) :: paper = 0
+	integer, dimension(1:10) :: currency = (/ 10000, 5000, 2000, 1000, 500, 100, 50, 10, 5, 1/)
 
 	write(*,*)"Input money :"
 	read(*,*)money
