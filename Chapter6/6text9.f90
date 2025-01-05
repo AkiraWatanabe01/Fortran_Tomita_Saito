@@ -1,14 +1,14 @@
 ! Page 86  6-9
 ! 6text9.f90 
-! The latest version (2024/10/12)
+! The latest version (2025/1/5)
 
 program practice
-implicit none
 
-	integer::i
-	integer::num, quotient, index = 0
-	integer, allocatable::exponent(:), factor(:)
-	character(len = 1), allocatable::operator(:)
+	implicit none
+	character(len = 1), allocatable :: operator(:)
+	integer :: i
+	integer :: num, quotient, index = 0
+	integer, allocatable :: exponent(:), factor(:)
 
 	write(*,*)"Input a positive integer:"
 	read(*,*)num
