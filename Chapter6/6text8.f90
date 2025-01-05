@@ -1,19 +1,19 @@
 ! Page 86 6-8
 ! 6text8.f90
-! The latest version (2024/10/6)
+! The latest version (2025/1/5)
 
 program practice
-implicit none
 
-        integer::i, j, k
-        integer::sum_num                                   ! the sum of numbers
-        integer::increase_digit                            ! increase in digit for summation
-        integer::increase_digit_1, increase_digit_2        ! increase in digit for multiplication
-        integer::sum_each_digit, product_num_plus
-        integer,dimension(1:20)::num_a, num_b
-        integer,dimension(1:21)::sum_ab                    ! the sum of num_a and num_b
-        integer,dimension(1:40)::product_ab = 0            ! the product of num_a and num_b
-        integer,dimension(1:20, 1:21)::product_digit
+        implicit none
+        integer :: i, j, k
+        integer :: sum_num                                   ! the sum of numbers
+        integer :: increase_digit                            ! increase in digit for summation
+        integer :: increase_digit_1, increase_digit_2        ! increase in digit for multiplication
+        integer :: sum_each_digit, product_num_plus
+        integer, dimension(1:20) :: num_a, num_b
+        integer, dimension(1:21) :: sum_ab                    ! the sum of num_a and num_b
+        integer, dimension(1:40) :: product_ab = 0            ! the product of num_a and num_b
+        integer, dimension(1:20, 1:21) :: product_digit
 
         ! Input 2 numbers
         write(*,*)"Input the number of A."
