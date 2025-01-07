@@ -1,6 +1,6 @@
-! Page 105  8-1
+! Page 140 8-1
 ! 8text1.f90
-! The latest version  (2024/11/17)
+! The latest version  (2025/1/7)
 
 subroutine binary_expression(num_decimal, num_binary)
 
