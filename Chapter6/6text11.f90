@@ -1,21 +1,21 @@
 ! Page86 6-11
 ! 6text11.f90 
-! The latest version (2024/9/12)
+! The latest version (2025/1/12)
 
 program practice
-implicit none
 
-	integer::n
-	integer::num_party			! number of parties
-	integer::result(2)			! return value of maxloc function
-	integer::index1, index2
-	integer::i, j
-	integer, allocatable::total_vote(:)	! total votes
-	real, allocatable::num_ind_vote(:,:)	! number of votes for individuals
-	character(len = 1)::alp_party(1:26) = (/'A','B','C','D','E','F','G', &
-						'H','I','J','K','L','M','N', &
-						'O','P','Q','R','S','T','U', &
-						'V','W','X','Y','Z'/)
+	implicit none
+	integer :: n
+	integer :: num_party			! number of parties
+	integer :: result(2)			! return value of maxloc function
+	integer :: index1, index2
+	integer :: i, j
+	integer, allocatable :: total_vote(:)	! total votes
+	real, allocatable :: num_ind_vote(:, :)	! number of votes for individuals
+	character(len = 1) :: alp_party(1:26) = (/'A','B','C','D','E','F','G', &
+						  'H','I','J','K','L','M','N', &
+						  'O','P','Q','R','S','T','U', &
+						  'V','W','X','Y','Z'/)
 
 	write(*,*)"Input number of winners:"
 	read(*,*)n
@@ -41,7 +41,7 @@ implicit none
 		result = maxloc(num_ind_vote)
 		index1 = result(1)
 		index2 = result(2)
-		write(*,'(1x, a1,a1,i2,a7,1x,f12.3)')alp_party(index2), "-", index1, ", vote:", maxval(num_ind_vote) 
+		write(*, '(1X, A1, "-", I2, A7, 1X, F12.3)')alp_party(index2), index1, ", vote:", maxval(num_ind_vote) 
 		num_ind_vote(index1, index2) = -1
 	end do
 
