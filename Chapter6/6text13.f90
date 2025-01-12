@@ -1,17 +1,17 @@
 ! Page87 6-13
 ! 6text13.f90 
-! The latest version (2024/9/16)
+! The latest version (2025/1/12)
 
 program practice
-implicit none
 
-	integer::i, j, k
-	integer::n = 32
-	integer::top, bottom, left, right
-	integer::determinant
-	integer, allocatable::a(:, :)
-	integer, allocatable::temp(:, :)
-	character(len = 1)::symbol(0:1) = (/' ', '#'/)
+	implicit none
+	character(len = 1) :: symbol(0:1) = (/' ', '#'/)
+	integer :: i, j, k
+	integer, parameter :: n = 32
+	integer :: top, bottom, left, right
+	integer :: determinant
+	integer, allocatable :: a(:, :)
+	integer, allocatable :: temp(:, :)
 
 	allocate(a(-n:n, -n:n))
 	allocate(temp(-n:n, -n:n))
@@ -22,7 +22,7 @@ implicit none
 
 	! Calculation
 	do k = 1, (n - 2)
-		temp(:, :) = a(:,:)
+		temp(:, :) = a(:, :)
 		do j = -n, n
 			left = j - 1
 			right = j + 1
