@@ -1,6 +1,6 @@
 ! Page 172 9-5
 ! 9text5.f90
-! The latest version 2025/1/1
+! The latest version 2025/1/15
 
 module vector_operator
 
@@ -25,6 +25,7 @@ contains
                 w%z = u%x * v%y - u%y * v%x
 
         end function cross_product
+
 end module vector_operator
 
 program practice
