@@ -1,16 +1,16 @@
 ! Page 105 7-2
 ! 7text2.f90
-! The latest version (2024/10/13)
+! The latest version (2025/3/5)
 
 program practice
-implicit none
 
-	character(len = 39)::axis_maximum, axis_minimum, axis_zero, axis, line
-	integer::i, j
-	integer::row_sine, row_cosine 
-	real::radian 
-	real::value_sine, value_cosine
-	real, parameter::degree_to_radian = 3.1415927e0 / 180e0
+	implicit none
+	character(len = 39) :: axis_maximum, axis_minimum, axis_zero, axis, line
+	integer :: i, j
+	integer :: row_sine, row_cosine 
+	real :: radian
+	real :: value_sine, value_cosine
+	real, parameter :: degree_to_radian = 3.1415927e0 / 180e0
 
 	! axis
 	axis_maximum = "+1-------------------------------------"
@@ -51,7 +51,7 @@ implicit none
 		end do
 
 		! Display
-		write(*,'(A39)')line(:)
+		write(*, '(A39)')line(:)
 	end do
 
 end program practice
