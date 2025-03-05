@@ -1,16 +1,16 @@
 ! Page 105 7-5
 ! 7text5.f90
-! The latest version (2024/10/20)
+! The latest version (2025/3/5)
 
 program practice
-implicit none
 
-	character(len = 80)::sentence
-	character(len = 80)::sentence_code = ' ', sentence_decode = ' '
-	integer::k = 3
-	integer::length_sentence, num_stored_char = 0
-	integer::position_start, position, offset_start, offset
-	integer::key
+	implicit none
+	character(len = 80) :: sentence
+	character(len = 80) :: sentence_code = ' ', sentence_decode = ' '
+	integer :: k = 3
+	integer :: length_sentence, num_stored_char = 0
+	integer :: position_start, position, offset_start, offset
+	integer :: key
 
 	! Input the sentence
 	write(*,*)"Input one sentence."
@@ -37,7 +37,7 @@ implicit none
 
 	! Input the key number
 	do 
-		write(*, '(A)', advance='no')"Input a key integer :"
+		write(*, '(A)', advance = 'no')"Input a key integer :"
 		read(*,*)key
 		if (key > 0) exit
 	end do
