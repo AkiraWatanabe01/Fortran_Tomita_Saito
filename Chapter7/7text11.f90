@@ -1,23 +1,30 @@
 ! Page 106 7-11
 ! 7text11.f90
-! The latest version (2024/10/22)
+! The latest version (2025/3/6)
 
 program practice
-implicit none
 
-	character(len = 20)::math_expression
-	character(len = 20)::buf_work
-	integer::i
-	integer::offset = 1
-	integer::buf_num, length_math_expression
-	integer::buf_array_first(1:20), buf_array_second(1:20)
-	integer::num_first = 0, num_second = 0, result
-	integer::digit, pos_operator
+	implicit none
+	character(len = 20) :: math_expression
+	character(len = 20) :: buf_work
+	integer :: i
+	integer :: offset = 1
+	integer :: buf_num, length_math_expression
+	integer :: buf_array_first(1:20), buf_array_second(1:20)
+	integer :: num_first = 0, num_second = 0, result_calc
+	integer :: digit, pos_operator
 
 	! Input
-	write(*,*)"Input an arithmetic operation"
-	write(*,*)"Usage:"
-	write(*,*)"Integer (+, -, *, or /) Integer ="
+	write(*,*)"Input an arithmetic operation:"
+	write(*,*)""
+	write(*,*)"############################################"
+	write(*,*)"# [Usage]                                  #"
+	write(*,*)"# Integer (+, -, *, or /) Integer =        #"
+	write(*,*)"#                                          #"
+	write(*,*)"# [Example]                                #"
+	write(*,*)"# 5 + 4 =                                  #"
+	write(*,*)"############################################"
+	write(*,*)""
 	read(*, '(A)')math_expression(:)
 
 	! Put characters on the left side
@@ -29,16 +36,16 @@ implicit none
 	length_math_expression = offset - 1
 
 	! Parse
-	if (ichar(buf_work(length_math_expression:length_math_expression)) /= ichar('=')) STOP "Invalid input!" 
+	if (buf_work(length_math_expression:length_math_expression) /= '=') STOP "Invalid input!" 
 	buf_num = ichar(buf_work(1:1)) - ichar('0')
-	if ((buf_num < 0).or.(9 < buf_num)) STOP "Invalid input (first integer)!"
+	if ((buf_num < 0) .or. (9 < buf_num)) STOP "Invalid input (first integer)!"
 
 	write(*, '(A)', advance = 'no')buf_work(:)
 
 	! Parse the first number
 	do i = 1, (length_math_expression - 1)
 		buf_num = ichar(buf_work(i:i)) - ichar('0')
-		if ((buf_num < 0).or.(9 < buf_num)) exit 
+		if ((buf_num < 0) .or. (9 < buf_num)) exit 
 		buf_array_first(i) = buf_num
 	end do
 
@@ -48,7 +55,7 @@ implicit none
 	offset = 1
 	do i = (pos_operator + 1), (length_math_expression - 1)
 		buf_num = ichar(buf_work(i:i)) - ichar('0')
-		if ((buf_num < 0).or.(9 < buf_num)) STOP "Invalid input (integer)!"
+		if ((buf_num < 0) .or. (9 < buf_num)) STOP "Invalid input (integer)!"
 		buf_array_second(offset) = buf_num
 		offset = offset + 1
 	end do
@@ -66,19 +73,19 @@ implicit none
 	end do
 
 	! Calculation
-	select case (ichar(buf_work(pos_operator:pos_operator)))
-	case (ichar('+'))
-		result = num_first + num_second 
-	case (ichar('-'))
-		result = num_first - num_second 
-	case (ichar('*'))
-		result = num_first * num_second 
-	case (ichar('/'))
-		result = num_first / num_second 
+	select case (buf_work(pos_operator:pos_operator))
+	case ('+')
+		result_calc = num_first + num_second 
+	case ('-')
+		result_calc = num_first - num_second 
+	case ('*')
+		result_calc = num_first * num_second 
+	case ('/')
+		result_calc = num_first / num_second 
 	case default
 		STOP "Invalid input (operator)!"
 	end select
 
-	write(*,*)result
+	write(*,*)result_calc
 
 end program practice
