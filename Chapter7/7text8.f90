@@ -22,9 +22,9 @@ program practice
 
 	! Reading an external file
 	open(8, file = '7text8_alphabet.txt')
-		do i = 1, 182
-			read(8, '(A)')buf_alphabet(i)
-		end do
+	do i = 1, 182
+		read(8, '(A)')buf_alphabet(i)
+	end do
 	close(8)
 
 	! Display the result
