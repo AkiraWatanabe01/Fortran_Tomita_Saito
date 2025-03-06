@@ -1,20 +1,20 @@
 ! Page 106 7-9
 ! 7text9.f90
-! The latest version (2024/11/9)
+! The latest version (2025/3/6)
 ! Caution: The apostrophe is treated as a single quotation.
 
 program practice
-implicit none
 
-	character(len = 80)::line(1:100)
-	character(len = 15)::word(1:2000) = ' '
-	character(len = 15)::word_temp
-	integer::i, j, k
-	integer::io
-	integer::num_line, num_word, length_word
-	integer::buf_num
-	integer::offset
-	integer::counter
+	implicit none
+	character(len = 80) :: line(1:100)
+	character(len = 15) :: word(1:2000) = ' '
+	character(len = 15) :: word_temp
+	integer :: i, j, k
+	integer :: io
+	integer :: num_line, num_word, length_word
+	integer :: buf_num
+	integer :: offset
+	integer :: counter
 
 	! Read a file
 	open (8, file = "7text9.txt")
@@ -59,7 +59,7 @@ implicit none
 
 			! Convert uppercase letters to lowercase
 			buf_num = ichar(line(i)(j:j))
-			if ((ichar('A') <= buf_num).and.(buf_num <= ichar('Z'))) then
+			if ((ichar('A') <= buf_num) .and. (buf_num <= ichar('Z'))) then
 				line(i)(j:j) = char(ichar(line(i)(j:j)) + ichar('a') - ichar('A'))
 			end if
 
@@ -104,7 +104,7 @@ implicit none
 	counter = 1
 	do k = 1, num_word
 		buf_num = ichar(word(k)(1:1))
-		if ((buf_num < ichar('a')).or.(ichar('z') < buf_num)) then
+		if ((buf_num < ichar('a')) .or. (ichar('z') < buf_num)) then
 			cycle
 		end if
 
@@ -113,11 +113,11 @@ implicit none
 			cycle
 		end if
 
-		if ((word(k)(1:1) == 'i').and.(word(k)(2:2) == ' ')) then
+		if ((word(k)(1:1) == 'i') .and. (word(k)(2:2) == ' ')) then
 			word(k)(1:1) = 'I'
 		end if
 
-		write(*,'(A15, 1X, I4)')word(k)(1:15), counter
+		write(*, '(A15, 1X, I4)')word(k)(1:15), counter
 		counter = 1
 	end do
 
