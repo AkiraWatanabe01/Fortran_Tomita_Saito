@@ -21,14 +21,14 @@ subroutine rungekutta (x, y, dy)
 
 end subroutine rungekutta
 
-! Function  ! f(x,y)=-x/y
+! Function  ! f(x,y)=-exp(x)/exp(y)
 function f(x, y) result (z)
 
         implicit none
         real(8), intent(in) :: x, y
         real(8) :: z
 
-        z = - x / y
+        z = exp(x) / exp(y)
 
 end function f
 
