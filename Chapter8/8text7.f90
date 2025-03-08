@@ -33,7 +33,7 @@ subroutine transparency_game_number(result)
 	call random_number(num_rnd)
 	num_pc = anint(9 * num_rnd)
 
-	write(*, '(A)', advance='no')"I chose one number (0-9). Guess which number I chose: "
+	write(*, '(A)', advance = 'no')"I chose one number (0-9). Guess which number I chose: "
 	read(*,*)num_player 
 
 	if (num_pc == num_player) then
