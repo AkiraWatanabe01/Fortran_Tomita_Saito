@@ -1,6 +1,6 @@
 ! Page 172 9-7
 ! 9text7.f90
-! The latest version 2025/1/14
+! The latest version 2025/3/8
 
 module matrix_calculator
 
@@ -22,6 +22,7 @@ contains
 		end do
 
 	end function Tp
+
 end module matrix_calculator
 
 program practice
