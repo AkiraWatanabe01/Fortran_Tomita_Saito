@@ -1,15 +1,15 @@
 ! Page 140 8-4
 ! 8text4.f90
-! The latest version (2024/11/3)
+! The latest version (2025/3/8)
 
 recursive subroutine bisection(val_left, val_right, rslt, num)
-implicit none
 
-        real(8)::val_mid
-        real(8), intent(in)::num
-        real(8), intent(inout)::val_left, val_right
-        real(8), intent(out)::rslt
-        real(8), external::f
+        implicit none
+        real(8) :: val_mid
+        real(8), intent(in) :: num
+        real(8), intent(inout) :: val_left, val_right
+        real(8), intent(out) :: rslt
+        real(8), external :: f
 
         val_mid = (val_left + val_right) / 2d0
 
@@ -30,9 +30,9 @@ implicit none
 end subroutine bisection
 
 function f(x, num) result (y)
-implicit none
 
-        real(8),intent(in)::x, num
+        implicit none
+        real(8), intent(in) :: x, num
         real(8)::y
 
         y = x ** 2d0 - num
@@ -40,12 +40,12 @@ implicit none
 end function f
 
 program practice
-implicit none
- 
-        real(8)::num
-        real(8)::x0, init_val_left, init_val_right
-        real(8)::product_num
-        real(8), external::f
+
+        implicit none
+        real(8) :: num
+        real(8) :: x0, init_val_left, init_val_right
+        real(8) :: product_num
+        real(8), external :: f
 
         write(*, '(A)', advance = 'no')"Calculate the square root of "
         read(*,*)num
