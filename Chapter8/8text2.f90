@@ -1,6 +1,6 @@
 ! Page 140 8-2
 ! 8text2.f90
-! The latest version (2024/10/20)
+! The latest version (2025/3/8)
 
 ! Subroutine
 subroutine cross_product(x, y, r)
