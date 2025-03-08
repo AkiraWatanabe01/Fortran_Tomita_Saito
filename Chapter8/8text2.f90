@@ -41,9 +41,9 @@ program practice
 		end function
 	end interface
 
-	write(*, '(A)', advance='no')"input a :"
+	write(*, '(A)', advance = 'no')"input a :"
 	read(*,*)a
-	write(*, '(A)', advance='no')"input b :"
+	write(*, '(A)', advance = 'no')"input b :"
 	read(*,*)b
 
 	! Function
